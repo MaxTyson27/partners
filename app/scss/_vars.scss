@@ -1,0 +1,44 @@
+
+
+
+// Флексы
+@mixin flex-center () {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-column ($align: center) {
+	display: flex;
+	flex-direction: column;
+  align-items: $align;
+}
+
+// Центрирование элемента внутри блока
+@mixin center-item ($position) {
+	position: $position; 
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%);
+}
+@mixin center-item-y ($position: absolute) {
+	position: $position;
+	top: 50%; 
+	transform: translateY(-50%);
+};
+@mixin center-item-x ($position: absolute) {
+	position: $position;
+	left: 50%; 
+	transform: translateX(-50%);
+};
+
+
+@mixin font ($name,$w, $url1, $url2) {
+  font-family: $name;
+  font-weight: $w;
+  font-style: normal;
+  src: local($name),
+  url($url1) format('woff2'),
+  url($url2) format('woff');
+  font-display: swap;
+}
