@@ -34,11 +34,33 @@
 
 
 @mixin font ($name,$w, $url1, $url2) {
-  font-family: $name;
-  font-weight: $w;
-  font-style: normal;
-  src: local($name),
-  url($url1) format('woff2'),
-  url($url2) format('woff');
-  font-display: swap;
+  @font-face{
+    font-family: $name;
+    font-weight: $w;
+    font-style: normal;
+    src: local($name),
+    url($url1) format('woff2'),
+    url($url2) format('woff');
+    font-display: swap;
+  }
+}
+
+@mixin bgp($url, $s, $pos1, $pos2 ) {
+  background-repeat: no-repeat;
+  background-image: url($url);
+  background-size: $s;
+  background-position: $pos1 $pos2;
+}
+
+%grap-400{
+  font-family: 'GraphikLCG-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%gradient{
+  background: linear-gradient(138.33deg, #FDDDB1 14.03%, #45547A 107.65%),
+linear-gradient(0deg, #F5E6D1, #F5E6D1),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
