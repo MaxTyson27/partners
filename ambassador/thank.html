@@ -1,0 +1,79 @@
+<?
+    if(isset($_GET["utm_campaign"]))setcookie("utm_campaign",$_GET["utm_campaign"],time()+3600*24*30,"/");
+    if(isset($_GET["utm_content"])) setcookie("utm_content",$_GET["utm_content"],time()+3600*24*30,"/");
+    if(isset($_GET["utm_medium"])) setcookie("utm_medium",$_GET["utm_medium"],time()+3600*24*30,"/");
+    if(isset($_GET["utm_source"])) setcookie("utm_source",$_GET["utm_source"],time()+3600*24*30,"/");
+    if(isset($_GET["utm_term"])) setcookie("utm_term",$_GET["utm_term"],time()+3600*24*30,"/");
+?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T6WJRD4');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3849965141793179');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3849965141793179&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Программа амбассадоров - Nedvex</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6WJRD4" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="wrapper">
+    <section class="thank">
+      <div class="thank__content">
+        <h1 class="thank__title">
+          Успешно!
+        </h1>
+        <p class="thank__text">
+          В ближайшее время
+          мы свяжемся с вами
+        </p>
+        <a href="index.html" class="thank__link">
+          На главную
+        </a>
+      </div>
+    </section>
+  </div>
+  <script src="js/main.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+</body>
+
+</html>
